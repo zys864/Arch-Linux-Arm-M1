@@ -7,7 +7,7 @@ on:
       - '**/README.md'
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' # Once per day at midnight UTC
+    - cron: '0 0 10 L * ?' # 每月最后一日的上午10:00触发 
 
 jobs:
   nightly:
