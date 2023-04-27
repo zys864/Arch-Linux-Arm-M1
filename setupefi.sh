@@ -5,7 +5,7 @@ rm /var/lib/pacman/db.lck # remove pacman lockfile?
 pacman-key --init
 pacman-key --populate archlinuxarm
 pacman -Syyu --noconfirm
-pacman -Syu --noconfirm efibootmgr
+pacman -Syu --noconfirm efibootmgr neovim
 efibootmgr --disk /dev/vda --part 1 --create --label "Arch Linux ARM" --loader /Image --unicode "root=UUID=$EXT4_UUID rw initrd=\initramfs-linux.img" --verbose
 rm $0
 poweroff
